@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin — परीक्षा केंद्र पोर्टल | Pradiptam</title>
+  <meta name="description" content="कक्षा 5वीं एवं 8वीं बोर्ड परीक्षा — परीक्षा केंद्र सहमति पोर्टल, विकासखंड रायगढ़ | Pradiptam Technologies">
+  <meta property="og:title" content="Admin — परीक्षा केंद्र पोर्टल | Pradiptam">
+  <meta property="og:image" content="https://pariksha.pradiptam.in/logo.png">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="theme-color" content="#1d4ed8">
+  <style>
+    html,body{margin:0;height:100%;overflow:hidden;background:#fff;font-family:system-ui,sans-serif}
+    iframe{border:0;width:100%;height:100%;display:block}
+    #splash{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;background:#fff;transition:opacity .4s}
+    #splash img{width:min(220px,55vw);height:auto}
+    #splash p{margin:0;color:#1f6f8b;font-size:15px}
+    #splash.hide{opacity:0;pointer-events:none}
+  </style>
+</head>
+<body>
+  <div id="splash"><img src="/logo.png" alt="Pradiptam Technologies"><p>लोड हो रहा है… / Loading…</p></div>
+  <iframe id="app" title="Admin — परीक्षा केंद्र पोर्टल | Pradiptam" allow="clipboard-write"></iframe>
+  <script>
+    // Apps Script web app link (Deploy → Manage deployments → Web app URL)
+    const APP_URL = 'https://script.google.com/macros/s/AKfycbzTM7QejUoSfZamk5Uj29lAY8GdQ07KvdzzKKjA6IB40N5pfDo7LVe9EIQgXj97sRht/exec';
+    const f = document.getElementById('app');
+    f.onload = () => document.getElementById('splash').classList.add('hide');
+    f.src = APP_URL + '?page=admin';
+  </script>
+</body>
+</html>
